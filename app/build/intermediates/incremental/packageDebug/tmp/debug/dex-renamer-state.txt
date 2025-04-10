@@ -1,0 +1,10 @@
+#Thu Apr 10 13:55:06 EDT 2025
+base.0=C\:\\Users\\nhata\\AndroidStudioProjects\\tp2-android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\nhata\\AndroidStudioProjects\\tp2-android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\nhata\\AndroidStudioProjects\\tp2-android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=13/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex

@@ -1,0 +1,33 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable login_backgroud_field
+id btnInscription
+id editTextAdresse
+id editTextAge
+id editTextNom
+id editTextNumberPassword
+id editTextNumberTelephone
+id editTextPrenom
+id editTextTextEmailAddress
+id editTextTextEmailAddress3
+id linearLayout
+id main
+id textView6
+id textView7
+layout activity_detail_destination
+layout activity_historique
+layout activity_liste_destination
+layout activity_main
+layout activity_page_connection
+layout activity_page_inscription
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.ComFelix_NathAnprojetX
+style Theme.ComFelix_NathAnprojetX
+xml backup_rules
+xml data_extraction_rules
