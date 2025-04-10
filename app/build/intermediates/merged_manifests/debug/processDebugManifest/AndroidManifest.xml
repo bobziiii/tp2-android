@@ -8,6 +8,8 @@
         android:minSdkVersion="24"
         android:targetSdkVersion="34" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <permission
         android:name="com.example.comfelix_nath_anprojetx.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
@@ -26,7 +28,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.ComFelix_NathAnprojetX" >
+        android:theme="@style/Theme.ComFelix_NathAnprojetX"
+        android:usesCleartextTraffic="true" >
         <activity
             android:name="com.example.comfelix_nath_anprojetx.Historique"
             android:exported="false" />
@@ -41,9 +44,6 @@
             android:exported="false" />
         <activity
             android:name="com.example.comfelix_nath_anprojetx.Page_Connection"
-            android:exported="false" />
-        <activity
-            android:name="com.example.comfelix_nath_anprojetx.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,6 +51,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.comfelix_nath_anprojetx.MainActivity"
+            android:exported="false" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

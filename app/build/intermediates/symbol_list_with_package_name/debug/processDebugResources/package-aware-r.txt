@@ -3210,7 +3210,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id btnInscription
+id btnSeConnecter
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3286,12 +3286,12 @@ id east
 id edge
 id editTextAdresse
 id editTextAge
+id editTextConnexionEmail
+id editTextConnexionMdp
 id editTextNom
-id editTextNumberPassword
 id editTextNumberTelephone
 id editTextPrenom
 id editTextTextEmailAddress
-id editTextTextEmailAddress3
 id edit_query
 id edit_text_id
 id elastic
@@ -3574,7 +3574,6 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView6
-id textView7
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3603,6 +3602,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvInscription
 id unchecked
 id uniform
 id unlabeled

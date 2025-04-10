@@ -37,9 +37,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    implementation("com.fasterxml.jackson.core:jackson-databind:2.16.1")
-    implementation("com.squareup.okhttp3:okhttp4.12.0")
-    testImplementation(libs.junit)
+    implementation(libs.jackson.databind)
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }
