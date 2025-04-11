@@ -7,4 +7,65 @@
     android:layout_height="match_parent"
     tools:context=".Liste_destination">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+
+        <TextView
+            android:id="@+id/tvHistorique"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mon historique de destination"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18sp"/>
+
+
+        <EditText
+            android:id="@+id/editTextSearchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:hint="Recherche par Nom, Destination"
+            android:inputType="text"
+            android:background="@drawable/bulle"
+            android:padding="16dp" />
+
+        <!-- Spinners espacés avec marges à gauche et droite -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp">
+
+            <Spinner
+                android:id="@+id/spBudget"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                />
+
+            <Spinner
+                android:id="@+id/spDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp" />
+
+            <Spinner
+                android:id="@+id/spType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

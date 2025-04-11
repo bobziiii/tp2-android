@@ -35,6 +35,8 @@ public class Page_Connection extends AppCompatActivity {
     private Button btnSeConnecter;
     private TextView tvInscription;
 
+    private final String url = "http://10.0.2.2:3000/clients";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,9 +54,11 @@ public class Page_Connection extends AppCompatActivity {
         tvInscription = findViewById(R.id.tvInscription);
 
         btnSeConnecter.setOnClickListener(v -> authentifierUtilisateur());
+
         tvInscription.setOnClickListener(v -> {
-            Intent intent = new Intent(Page_Connection.this, Page_Inscription.class);
+            Intent intent = new Intent(this, Page_Inscription.class);
             startActivity(intent);
+            finish();
         });
     }
 
@@ -66,8 +70,6 @@ public class Page_Connection extends AppCompatActivity {
             Toast.makeText(this, "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
             return;
         }
-
-        final String url = "http://10.0.2.2:3000/clients";
 
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()

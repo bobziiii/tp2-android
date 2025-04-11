@@ -3007,6 +3007,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable bulle
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3210,6 +3211,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnInscription
 id btnSeConnecter
 id buttonPanel
 id cache_measures
@@ -3288,10 +3290,12 @@ id editTextAdresse
 id editTextAge
 id editTextConnexionEmail
 id editTextConnexionMdp
+id editTextEmail
+id editTextMdp
 id editTextNom
-id editTextNumberTelephone
+id editTextPhone
 id editTextPrenom
-id editTextTextEmailAddress
+id editTextText
 id edit_query
 id edit_text_id
 id elastic
@@ -3531,6 +3535,9 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinner
+id spinner2
+id spinner3
 id spline
 id split_action_bar
 id spread
@@ -3602,7 +3609,9 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvHistorique
 id tvInscription
+id tvSeConnecter
 id unchecked
 id uniform
 id unlabeled

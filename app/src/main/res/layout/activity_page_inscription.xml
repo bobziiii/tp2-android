@@ -60,7 +60,7 @@
                 android:layout_marginBottom="20dp"/>
 
             <EditText
-                android:id="@+id/editTextTextEmailAddress"
+                android:id="@+id/editTextEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/login_backgroud_field"
@@ -73,7 +73,7 @@
                 android:layout_marginBottom="20dp"
                  />
             <EditText
-                android:id="@+id/editTextNumberTelephone"
+                android:id="@+id/editTextPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/login_backgroud_field"
@@ -110,7 +110,7 @@
                 android:layout_marginBottom="20dp"/>
 
             <EditText
-                android:id="@+id/editTextConnexionMdp"
+                android:id="@+id/editTextMdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/login_backgroud_field"
@@ -122,7 +122,7 @@
                 android:paddingTop="4dp" />
 
             <Button
-                android:id="@+id/btnSeConnecter"
+                android:id="@+id/btnInscription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24sp"
@@ -133,7 +133,7 @@
                 />
 
             <TextView
-                android:id="@+id/tvInscription"
+                android:id="@+id/tvSeConnecter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6sp"
