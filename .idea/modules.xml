@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.Felix_Nath-An.projetX.iml" filepath="$PROJECT_DIR$/.idea/modules/com.Felix_Nath-An.projetX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/com.Felix_Nath-An.projetX.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/com.Felix_Nath-An.projetX.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/com.Felix_Nath-An.projetX.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/com.Felix_Nath-An.projetX.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/com.Felix_Nath-An.projetX.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/com.Felix_Nath-An.projetX.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/com.Felix_Nath-An.projetX.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/com.Felix_Nath-An.projetX.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/tp2-android.iml" filepath="$PROJECT_DIR$/.idea/tp2-android.iml" />
     </modules>
   </component>
