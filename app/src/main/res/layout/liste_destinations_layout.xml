@@ -10,7 +10,7 @@
 
     <!-- Nom / Ville (Haut à gauche) -->
     <TextView
-        android:id="@+id/lieu_liste"
+        android:id="@+id/tvDestinationListe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="lieu"
@@ -21,7 +21,7 @@
 
     <!-- Image principale -->
     <ImageView
-        android:id="@+id/imgPrincipal"
+        android:id="@+id/imgDestinationListe"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
@@ -36,16 +36,16 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/description_ville_liste"
+            android:id="@+id/tvDescriptionListe"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="3"
             android:text="Texte gauche"
             android:textColor="#333333"
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/prix_liste"
+            android:id="@+id/tvPrixListe"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"

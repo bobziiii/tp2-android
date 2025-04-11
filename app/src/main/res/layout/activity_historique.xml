@@ -17,7 +17,7 @@
         android:layout_marginLeft="10dp">
 
         <ImageView
-            android:id="@+id/back_button"
+            android:id="@+id/btnRetourHistorique"
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_marginBottom="8dp"
@@ -38,6 +38,7 @@
             android:layout_marginBottom="10dp"/>
 
         <ListView
+            android:id="@+id/lvHistorique"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

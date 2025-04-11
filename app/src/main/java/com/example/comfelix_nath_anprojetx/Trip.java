@@ -1,6 +1,8 @@
 package com.example.comfelix_nath_anprojetx;
 
-public class Trip {
+import java.io.Serializable;
+
+public class Trip implements Serializable {
     private String date;
     private int nb_places_disponibles;
     public Trip() {}

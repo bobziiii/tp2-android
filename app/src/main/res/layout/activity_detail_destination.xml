@@ -1,45 +1,49 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/detailLayout"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context=".Detail_destination">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="start"
         android:orientation="vertical"
         android:padding="16dp"
-        android:gravity="start"
-        tools:context=".Detail_destination"
-        app:layout_constraintBottom_toBottomOf="parent"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".Detail_destination">
 
         <!-- Bouton retour -->
-        <ImageView
-            android:id="@+id/back_button"
+        <ImageButton
+            android:id="@+id/btnRetour"
+            style="@null"
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_marginBottom="8dp"
-            android:src="@drawable/baseline_arrow_circle_left_24"
-            android:contentDescription="Retour"
+            android:background="@null"
             android:clickable="true"
-            android:focusable="true" />
+            android:scaleType="fitCenter"
+            android:contentDescription="Retour"
+            android:focusable="true"
+            android:src="@drawable/baseline_arrow_circle_left_24" />
 
         <!-- Titre principal -->
         <TextView
-            android:id="@+id/Ville_province"
+            android:id="@+id/tvDestination"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:text="Titre principal"
-            android:textSize="20sp"
-            android:layout_marginBottom="8dp" />
+            android:textSize="20sp" />
 
-        <!-- Image avec coins arrondis et hauteur = 1/6 de l'écran (~130dp) -->
         <ImageView
-            android:id="@+id/imageville"
+            android:id="@+id/imgDestination"
             android:layout_width="match_parent"
             android:layout_height="165dp"
             android:layout_marginBottom="16dp"
@@ -49,22 +53,20 @@
             android:scaleType="centerCrop"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-        <!-- Deux textes à gauche -->
         <TextView
-            android:id="@+id/description_ville"
+            android:id="@+id/tvDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Texte 1"
-            android:layout_marginBottom="4dp" />
+            android:layout_marginBottom="4dp"
+            android:text="Texte 1" />
 
         <TextView
-            android:id="@+id/duree"
+            android:id="@+id/tvDuree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Texte 2"
-            android:layout_marginBottom="4dp" />
+            android:layout_marginBottom="4dp"
+            android:text="Texte 2" />
 
-        <!-- Trois textes collés -->
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
@@ -72,51 +74,49 @@
             android:text="Activite incluse:" />
 
         <TextView
-            android:id="@+id/liste_activite"
+            android:id="@+id/tvListeActivite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Texte B"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:text="Texte B" />
 
         <TextView
-            android:id="@+id/Prix"
+            android:id="@+id/tvPrix"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Prix "
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:text="Prix " />
 
         <!-- Texte avec padding -->
         <TextView
             android:id="@+id/Date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Selectionner une date:"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginTop="20dp"/>
+            android:text="Sélectionnez une date:" />
 
-        <!-- Spinner à gauche avec fond gris -->
         <Spinner
-            android:id="@+id/choix_date"
-            android:layout_width="95dp"
+            android:id="@+id/spChoixDate"
+            android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_marginBottom="24dp"
-            android:background="@drawable/spinner"/>
+            android:background="@drawable/spinner" />
 
-        <!-- Texte centré -->
         <TextView
-            android:id="@+id/nb_place_dispo"
+            android:id="@+id/tvNbPlaceDispo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nb place"
+            android:layout_marginBottom="16dp"
             android:gravity="center"
-            android:textSize="18sp"
-            android:layout_marginBottom="16dp" />
+            android:text="Nb place"
+            android:textSize="18sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:padding="8dp">
 
             <ImageButton
@@ -124,37 +124,37 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
-                android:background="@null"
-                app:srcCompat="@drawable/minus_icon"
-                android:scaleType="centerInside"
                 android:adjustViewBounds="true"
-                android:contentDescription="Réduire le nombre" />
+                android:background="@null"
+                android:contentDescription="Réduire le nombre"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/minus_icon" />
 
 
-            <!-- TextView au centre (3/5 de l'espace) -->
             <TextView
-                android:id="@+id/nb_choix_place"
+                android:id="@+id/tvNbPlaceDemande"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
+                android:text="1"
                 android:textAlignment="center"
-                android:text="4000"/>
+                android:textSize="18sp" />
 
             <ImageButton
                 android:id="@+id/imgBtnPlus"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/add_icon"
-                android:background="@null"
                 android:layout_marginRight="15dp"
-                android:scaleType="centerInside"
+                android:layout_weight="1"
                 android:adjustViewBounds="true"
-                android:contentDescription="Ajouter une place" />
+                android:background="@null"
+                android:contentDescription="Ajouter une place"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/add_icon" />
 
 
             <Button
-                android:id="@+id/btnreserve"
+                android:id="@+id/btnReserve"
                 android:layout_width="wrap_content"
                 android:layout_height="58dp"
                 android:layout_gravity="center"
@@ -166,8 +166,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,15 +1,23 @@
 [
     {
-        "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
         "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\drawable_baseline_arrow_back_24.xml.flat",
+        "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\drawable\\baseline_arrow_back_24.xml"
+    },
+    {
         "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\drawable_baseline_arrow_circle_left_24.xml.flat",
+        "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\drawable\\baseline_arrow_circle_left_24.xml"
     },
     {
         "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\xml_data_extraction_rules.xml.flat",
@@ -18,6 +26,10 @@
     {
         "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\layout_liste_destinations_layout.xml.flat",
+        "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\layout\\liste_destinations_layout.xml"
     },
     {
         "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\layout_activity_main.xml.flat",
@@ -38,6 +50,10 @@
     {
         "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\drawable_drawable_round_image.xml.flat",
+        "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\drawable\\drawable_round_image.xml"
     },
     {
         "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\layout_activity_liste_destination.xml.flat",
@@ -64,6 +80,14 @@
         "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "com.example.comfelix_nath_anprojetx.app-debug-32:/layout_activity_detail_destination.xml.flat",
+        "source": "com.example.comfelix_nath_anprojetx.app-main-34:/layout/activity_detail_destination.xml"
+    },
+    {
+        "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\drawable_add_icon.png.flat",
+        "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\drawable\\add_icon.png"
+    },
+    {
         "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
@@ -88,15 +112,35 @@
         "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\drawable_minus_icon.png.flat",
+        "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\drawable\\minus_icon.png"
+    },
+    {
         "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\layout_activity_page_inscription.xml.flat",
         "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\layout\\activity_page_inscription.xml"
     },
     {
-        "merged": "com.example.comfelix_nath_anprojetx.app-debug-32:/layout_activity_liste_destination.xml.flat",
-        "source": "com.example.comfelix_nath_anprojetx.app-main-34:/layout/activity_liste_destination.xml"
-    },
-    {
         "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\drawable_bulle.xml.flat",
         "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\drawable\\bulle.xml"
+    },
+    {
+        "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\drawable_spinner.xml.flat",
+        "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\drawable\\spinner.xml"
+    },
+    {
+        "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\layout_historique_layout.xml.flat",
+        "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\layout\\historique_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\drawable_bg_gris_arrondi.xml.flat",
+        "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\drawable\\bg_gris_arrondi.xml"
+    },
+    {
+        "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\drawable_bg_vert_arrondi.xml.flat",
+        "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\drawable\\bg_vert_arrondi.xml"
+    },
+    {
+        "merged": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-debug-32:\\drawable_effacer.png.flat",
+        "source": "C:\\Users\\nhata\\.gradle\\daemon\\8.9\\com.example.comfelix_nath_anprojetx.app-main-34:\\drawable\\effacer.png"
     }
 ]
