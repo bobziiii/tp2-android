@@ -3,6 +3,7 @@ package com.example.comfelix_nath_anprojetx;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -15,6 +16,8 @@ public class Liste_destination extends AppCompatActivity {
 
     private TextView tvHistorique;
 
+    private Spinner spBudget, spDate, spType;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +29,9 @@ public class Liste_destination extends AppCompatActivity {
             return insets;
         });
 
+        spBudget = findViewById(R.id.spBudget);
+        spDate = findViewById(R.id.spDate);
+        spType = findViewById(R.id.spType);
         tvHistorique = findViewById(R.id.tvHistorique);
         tvHistorique.setPaintFlags(tvHistorique.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
@@ -33,6 +39,6 @@ public class Liste_destination extends AppCompatActivity {
             Intent intent = new Intent(this, Historique.class);
             startActivity(intent);
         });
-        
+
     }
 }
