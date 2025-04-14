@@ -1,6 +1,8 @@
 package com.example.comfelix_nath_anprojetx;
 
 import android.app.AlertDialog;
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -68,7 +70,7 @@ public class Detail_destination extends AppCompatActivity {
             tvActivites.setText(voyage.getActivites_incluses());
             tvPrix.setText("Prix : " + voyage.getPrix() + "$");
 
-            // Charger image
+            //image
             new Thread(() -> {
                 try {
                     URL url = new URL(voyage.getImage_url());
@@ -79,7 +81,7 @@ public class Detail_destination extends AppCompatActivity {
                 }
             }).start();
 
-            // Remplir Spinner
+            //remplir Spinner
             List<String> dates = new ArrayList<>();
             for (Trip trip : voyage.getTrips()) {
                 dates.add(trip.getDate());
@@ -89,7 +91,7 @@ public class Detail_destination extends AppCompatActivity {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spChoixDate.setAdapter(adapter);
 
-            // Initialiser avec la première date
+
             if (!voyage.getTrips().isEmpty()) {
                 nbPlacesDispoActuel = voyage.getTrips().get(0).getNb_places_disponibles();
                 tvNbPlaceDispo.setText("Places disponibles : " + nbPlacesDispoActuel);
@@ -159,6 +161,18 @@ public class Detail_destination extends AppCompatActivity {
                         mettreAJourPlacesDisponibles(voyage.getId(), spChoixDate.getSelectedItemPosition(), nouvellesPlaces);
                         Toast.makeText(this, "Réservation confirmée !", Toast.LENGTH_LONG).show();
 
+                        DatabaseHelper dbHelper = new DatabaseHelper(Detail_destination.this);
+                        String destination = voyage.getDestination();
+                        String date = spChoixDate.getSelectedItem().toString();
+                        int idVoyage = voyage.getId();
+                        String statut = "confirmée";
+
+                        boolean success = dbHelper.ajouterReservation(idVoyage, destination, date, total, statut);
+
+                        if (!success) {
+                            Toast.makeText(this, "Erreur lors de l'enregistrement local", Toast.LENGTH_SHORT).show();
+                        }
+
                         if (nouvellesPlaces == 0) {
                             btnReserve.setEnabled(false);
                         }
@@ -187,9 +201,6 @@ public class Detail_destination extends AppCompatActivity {
 
                 if (response.isSuccessful()) {
                     String responseData = response.body().string();
-
-                    Log.d("JSON Response", responseData);  // Affiche la réponse JSON brute
-
                     try {
                         JSONArray voyagesArray = new JSONArray(responseData);
 
@@ -221,6 +232,7 @@ public class Detail_destination extends AppCompatActivity {
                                                 if (response.isSuccessful()) {
                                                     Toast.makeText(Detail_destination.this, "Places mises à jour", Toast.LENGTH_SHORT).show();
                                                 } else {
+                                                    //debug
                                                     Toast.makeText(Detail_destination.this, "Erreur serveur", Toast.LENGTH_SHORT).show();
                                                 }
                                             });
@@ -238,4 +250,5 @@ public class Detail_destination extends AppCompatActivity {
             }
         });
     }
+
 }

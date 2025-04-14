@@ -3209,7 +3209,6 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id axisRelative
-id back_button
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3222,10 +3221,10 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id btnConfirme
 id btnInscription
 id btnReserve
 id btnRetour
+id btnRetourHistorique
 id btnSeConnecter
 id btnSupprimer
 id buttonPanel
@@ -3267,7 +3266,6 @@ id currentState
 id custom
 id customPanel
 id cut
-id date
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3382,13 +3380,13 @@ id layout
 id left
 id leftToRight
 id legacy
-id lieu
 id line1
 id line3
 id linear
 id linearLayout
 id listMode
 id list_item
+id lvHistorique
 id lvListeDestinations
 id m3_side_sheet
 id main
@@ -3504,7 +3502,6 @@ id pin
 id position
 id postLayout
 id pressed
-id prix
 id progress_circular
 id progress_horizontal
 id radio
@@ -3635,9 +3632,11 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvDateHistorique
 id tvDescription
 id tvDescriptionListe
 id tvDestination
+id tvDestinationHistorique
 id tvDestinationListe
 id tvDuree
 id tvHistorique
@@ -3646,8 +3645,10 @@ id tvListeActivite
 id tvNbPlaceDemande
 id tvNbPlaceDispo
 id tvPrix
+id tvPrixHistorique
 id tvPrixListe
 id tvSeConnecter
+id tvStatutHistorique
 id unchecked
 id uniform
 id unlabeled

@@ -3,7 +3,9 @@ package com.example.comfelix_nath_anprojetx;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,25 +25,26 @@ public class ListeDestinationsAdapter extends ArrayAdapter<Voyage> {
 
     private Context context;
     private int layoutResource;
-    private List<Voyage> voyages;
-    private List<Voyage> voyagesFiltres;
+    //private List<Voyage> voyages;
 
     public ListeDestinationsAdapter(@NonNull Context context, int resource, @NonNull List<Voyage> voyages) {
         super(context, resource, voyages);
         this.context = context;
         this.layoutResource = resource;
-        this.voyages = voyages;
+        //this.voyages = voyages;
     }
 
     @Override
     public int getCount() {
-        return voyages.size();
+        //return voyages.size();
+        return super.getCount();
     }
 
     @Nullable
     @Override
     public Voyage getItem(int position) {
-        return voyagesFiltres.get(position);
+        //return voyages.get(position);
+        return super.getItem(position);
     }
 
     @NonNull
@@ -53,7 +56,8 @@ public class ListeDestinationsAdapter extends ArrayAdapter<Voyage> {
             convertView = inflater.inflate(layoutResource, parent, false);
         }
 
-        Voyage voyage = voyages.get(position);
+
+        Voyage voyage = getItem(position);;
 
         TextView tvDestination = convertView.findViewById(R.id.tvDestinationListe);
         TextView tvDescription = convertView.findViewById(R.id.tvDescriptionListe);
@@ -95,20 +99,13 @@ public class ListeDestinationsAdapter extends ArrayAdapter<Voyage> {
         }
     }
 
-    public void filtrer(String texte) {
-        texte = texte.toLowerCase();
-        voyagesFiltres = new ArrayList<>();
+    public void updateData(List<Voyage> nouvellesDestinations) {
 
-        if (texte.isEmpty()) {
-            voyagesFiltres.addAll(voyages);
-        } else {
-            for (Voyage v : voyages) {
-                if (v.getDestination().toLowerCase().contains(texte)
-                        || v.getNom_voyage().toLowerCase().contains(texte)) {
-                    voyagesFiltres.add(v);
-                }
-            }
-        }
+        //Ce clear cause problème et empêche l'affichage des voyages, malheureusement sans lui les voyages se dupliquent plus on ajoute de filtres
+        //clear();
+        addAll(nouvellesDestinations);
         notifyDataSetChanged();
     }
+
+
 }

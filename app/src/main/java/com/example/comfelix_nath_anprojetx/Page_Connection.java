@@ -1,6 +1,7 @@
 package com.example.comfelix_nath_anprojetx;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -80,7 +81,7 @@ public class Page_Connection extends AppCompatActivity {
 
             @Override
             public void onFailure(Call call, IOException e) {
-                // Affiche les détails de l'exception dans Logcat
+                //debug
                 Log.e("Page_Connection", "Erreur lors de la connexion au serveur", e);
                 runOnUiThread(() -> {
                     Toast.makeText(Page_Connection.this, "Erreur de connexion au serveur", Toast.LENGTH_SHORT).show();
@@ -93,14 +94,13 @@ public class Page_Connection extends AppCompatActivity {
 
                 if (response.isSuccessful()) {
                     try {
-                        // Analyser la réponse JSON
                         JSONArray utilisateurs = new JSONArray(response.body().string());
 
                         boolean utilisateurTrouve = false;
                         for (int i = 0; i < utilisateurs.length(); i++) {
                             JSONObject utilisateur = utilisateurs.getJSONObject(i);
 
-                            // Vérifier si les identifiants correspondent
+                            //Si les identifiants correspondent
                             if (utilisateur.getString("email").equals(email) &&
                                     utilisateur.getString("mdp").equals(motDePasse)) {
                                 utilisateurTrouve = true;
@@ -119,9 +119,11 @@ public class Page_Connection extends AppCompatActivity {
                         }
 
                     } catch (JSONException e) {
+                        //debug
                         Log.e("Page_Connection", "Erreur de traitement des données JSON", e);
                         runOnUiThread(() -> Toast.makeText(Page_Connection.this, "Erreur de traitement des données", Toast.LENGTH_SHORT).show());                    }
                 } else {
+                    //debug
                     Log.e("Page_Connection", "Réponse du serveur non réussie, code HTTP : " + response.code());
                     runOnUiThread(() -> Toast.makeText(Page_Connection.this, "Échec de la récupération des données", Toast.LENGTH_SHORT).show());
                 }
@@ -129,5 +131,14 @@ public class Page_Connection extends AppCompatActivity {
         });
     }
 
+
+    //vider les tables de la db
+    @Override
+    protected void onStart() {
+        super.onStart();
+        SQLiteDatabase db = new DatabaseHelper(this).getWritableDatabase();
+        db.delete("reservations", null, null);
+        db.close();
+    }
 
 }

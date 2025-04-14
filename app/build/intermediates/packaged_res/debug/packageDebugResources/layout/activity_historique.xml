@@ -16,11 +16,14 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp">
 
-        <ImageView
-            android:id="@+id/back_button"
+        <ImageButton
+            android:id="@+id/btnRetourHistorique"
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_marginBottom="8dp"
+            android:background="@null"
+            style="@null"
+            android:scaleType="fitCenter"
             android:src="@drawable/baseline_arrow_circle_left_24"
             android:contentDescription="Retour"
             android:clickable="true"
@@ -38,6 +41,7 @@
             android:layout_marginBottom="10dp"/>
 
         <ListView
+            android:id="@+id/lvHistorique"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

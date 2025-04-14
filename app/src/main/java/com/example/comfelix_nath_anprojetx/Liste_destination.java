@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -35,7 +36,6 @@ public class Liste_destination extends AppCompatActivity {
     private ListeDestinationsAdapter adapter;
     private List<Voyage> listeVoyages = new ArrayList<>();
     private List<Voyage> listeVoyagesFiltrees = new ArrayList<>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,9 +89,7 @@ public class Liste_destination extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (adapter != null) {
-                    adapter.filtrer(s.toString());
-                }
+                appliquerFiltres();
             }
 
             @Override
@@ -101,7 +99,7 @@ public class Liste_destination extends AppCompatActivity {
 
         // selection voyage
         lvListeDestinations.setOnItemClickListener((parent, view, position, id) -> {
-            Voyage voyage = listeVoyages.get(position);
+            Voyage voyage = listeVoyagesFiltrees.get(position);
 
             Intent intent = new Intent(this, Detail_destination.class);
             intent.putExtra("VOYAGE", voyage);
@@ -118,28 +116,37 @@ public class Liste_destination extends AppCompatActivity {
     private void chargerVoyagesDepuisServeur() {
         dao.getVoyagesDepuisServeur("http://10.0.2.2:3000/voyages", voyages -> {
             new Handler(Looper.getMainLooper()).post(() -> {
-                listeVoyagesFiltrees = new ArrayList<>(voyages);
+
                 listeVoyages = new ArrayList<>(voyages);
 
-                adapter = new ListeDestinationsAdapter(Liste_destination.this, R.layout.liste_destinations_layout, listeVoyages);
-                lvListeDestinations.setAdapter(adapter);
+                listeVoyagesFiltrees = new ArrayList<>(voyages);
+                listeVoyagesFiltrees.addAll(listeVoyages);
 
-                appliquerFiltres();
+                adapter = new ListeDestinationsAdapter(Liste_destination.this, R.layout.liste_destinations_layout, listeVoyagesFiltrees);
+                lvListeDestinations.setAdapter(adapter);
             });
         });
     }
 
     private void appliquerFiltres() {
+
         String filtreBudget = spBudget.getSelectedItem().toString();
         String filtreDate = spDate.getSelectedItem().toString();
         String filtreType = spType.getSelectedItem().toString();
+        String texteRecherche = editTextSearchBar.getText().toString().toLowerCase();
 
         listeVoyagesFiltrees.clear();
 
         for (Voyage v : listeVoyages) {
             boolean match = true;
 
-            // Budget
+            // Filtre recherche
+            if (!texteRecherche.isEmpty() && !v.getNom_voyage().toLowerCase().contains(texteRecherche)) {
+                if(!v.getDestination().toLowerCase().contains(texteRecherche) && !v.getNom_voyage().toLowerCase().contains(texteRecherche))
+                    match = false;
+            }
+
+            // Filtre budget
             if (!filtreBudget.equals("Budget")) {
                 int prix = (int) v.getPrix();
                 if (filtreBudget.equals("0 - 200") && !(prix <= 200)) match = false;
@@ -148,7 +155,7 @@ public class Liste_destination extends AppCompatActivity {
                 else if (filtreBudget.equals("601 - 800") && !(prix > 600 && prix <= 800)) match = false;
             }
 
-            // Date (par mois)
+            // Filtre date
             if (!filtreDate.equals("Date")) {
                 boolean dateMatch = false;
                 for (Trip t : v.getTrips()) {
@@ -160,19 +167,22 @@ public class Liste_destination extends AppCompatActivity {
                 if (!dateMatch) match = false;
             }
 
-            // Type de voyage
+            // Filtre type
             if (!filtreType.equals("Type") && !v.getType_de_voyage().equalsIgnoreCase(filtreType)) {
                 match = false;
             }
 
             if (match) {
                 listeVoyagesFiltrees.add(v);
+                Log.d("ListeDestinations", "Voyage correspondant: " + v.getNom_voyage());
             }
         }
 
-        adapter.clear();
-        adapter.addAll(listeVoyagesFiltrees);
-        adapter.notifyDataSetChanged();
+        Log.d("ListeDestinations", "Taille de listeVoyagesFiltrees: " + listeVoyagesFiltrees.size());
+
+
+        adapter.updateData(listeVoyagesFiltrees);
     }
+
 
 }
